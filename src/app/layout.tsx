@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { NextUIProvider } from '@nextui-org/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html className="h-screen w-screen bg-black text-white" lang="en">
+      <body className={`h-full w-full m-0 p-0 ${inter.className}`}>
+        <NextUIProvider className="h-full w-full m-0 p-0">
+            <main className="h-full w-full">{children}</main>
+        </NextUIProvider>
+      </body>
     </html>
   );
 }

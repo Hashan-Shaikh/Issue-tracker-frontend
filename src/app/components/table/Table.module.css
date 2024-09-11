@@ -1,0 +1,10 @@
+.customContainer>div>div{
+    background-color: black !important;
+    /* width: fit-content; */
+    padding: 0;
+}
+.customContainer>div>div>table>thead>tr>th{
+    background-color: rgb(20, 20, 20) !important;
+    color: white;
+}
+
